@@ -17,11 +17,9 @@ class ClassComponent extends PureComponent {
     }
     render() {
         return(
-            <View
-                style={this.getHeight().view}
-            >
+            <div>
                 {this.props.children}
-            </View>
+            </div>
         );
     }
 }
