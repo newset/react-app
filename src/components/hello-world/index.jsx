@@ -1,14 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-const HelloWorld = (props) => (
-    <div>Hello World</div>
-)
+const HelloWorld = props => <div>Hello World</div>;
 
-HelloWorld.propTypes = {
-};
+HelloWorld.propTypes = {};
 
-HelloWorld.defaultProps = {
-};
+HelloWorld.defaultProps = {};
 
 export default HelloWorld;

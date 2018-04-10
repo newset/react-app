@@ -1,1 +1,1 @@
-import getInfo from './get/getInfo';
+import getInfo from "./get/getInfo";

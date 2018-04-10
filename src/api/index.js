@@ -1,9 +1,7 @@
 const HEALTH_APP_PATH = "/health/";
 const HEALTH_REACT_PATH = "/health-react/";
 
-class Request {
-
-}
+class Request {}
 
 /**
  * 请求快捷方法
@@ -12,16 +10,12 @@ class Request {
  * @param {object} opts 请求选项
  */
 export const make = (method, url, opts) => {
-  return (data, params) => {
-
-  }
-}
+  return (data, params) => {};
+};
 
 /**
- * 
+ *
  * @param {string} url base 地址
  * @param {object} actions resource 操作 query/list/update/delete
  */
-export const resource = (url, actions) => {
-
-}
+export const resource = (url, actions) => {};
