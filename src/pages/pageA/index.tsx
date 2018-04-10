@@ -1,7 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PageA = () => {
-    return <div>PageA</div>;
+    return (
+        <div>
+            PageA
+            <Link to="/b">go to pageB</Link>
+        </div>
+    );
 };
 
 export default PageA;
