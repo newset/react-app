@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './styles/main.styl';
 
 const logo = require('./assets/logo.svg') as string;
@@ -15,6 +16,11 @@ class App extends Component<{}> {
                     To get started, edit <code>src/App.js</code> and save to
                     reload.
                 </p>
+                <div>
+                    <Link to="/">index</Link>
+                    <Link to="/a">go to pageA</Link>
+                    <Link to="/b">go to pageB</Link>
+                </div>
             </div>
         );
     }
