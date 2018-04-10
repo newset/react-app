@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "build/dist",
+    "outDir": "dist",
     "module": "esnext",
     "target": "es5",
     "lib": [
@@ -11,7 +11,7 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDir": "src",
+    "rootDir": "./",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -26,10 +26,8 @@
     "node_modules",
     "build",
     "scripts",
-    "src/assets",
     "acceptance-tests",
     "webpack",
     "jest",
-    "src/setupTests.ts"
   ]
 }

@@ -1,5 +1,8 @@
 {
-	"extends": ["tslint-react"],
+	"extends": [
+		"tslint-react",
+		"tslint-eslint-rules"
+	],
 	"rules": {
 		"align": [true, "parameters", "arguments", "statements"],
 		"ban": false,
@@ -8,7 +11,6 @@
 		"curly": true,
 		"eofline": false,
 		"forin": true,
-		"indent": [true, "spaces"],
 		"interface-name": [true, "never-prefix"],
 		"jsdoc-format": true,
 		"jsx-no-lambda": false,
@@ -45,7 +47,6 @@
 		"no-switch-case-fall-through": true,
 		"no-trailing-whitespace": false,
 		"no-unused-expression": true,
-		"no-use-before-declare": true,
 		"one-line": [
 			true,
 			"check-catch",
@@ -57,9 +58,7 @@
 		"radix": true,
 		"semicolon": [true, "always"],
 		"switch-default": true,
-
 		"trailing-comma": [false],
-
 		"triple-equals": [true, "allow-null-check"],
 		"typedef": [true, "parameter", "property-declaration"],
 		"typedef-whitespace": [
@@ -88,6 +87,11 @@
 			"check-separator",
 			"check-type",
 			"check-typecast"
-		]
+		],
+		"ter-indent": [
+			true,
+			4
+		],
+		"member-access": true
 	}
 }
