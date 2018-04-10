@@ -9,10 +9,9 @@ const store = createStore();
 
 ReactDOM.render(
     <Provider store={store}>
-        <div>test</div>
+        <App />
     </Provider>,
     document.getElementById('root')
 );
-// <App />
 
 // registerServiceWorker();
