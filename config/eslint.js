@@ -9,6 +9,8 @@ function getEslintOptions(rules) {
     return getLoader(rules, matcher).options;
 }
 function rewireEslint(config, env, override = f => f) {
+
+    config.module.rules[0].test = /.(js|jsx|mjs|ts|tsx)/;
     // if `react-scripts` version < 1.0.0
     // **eslint options** is in `config`
     const oldOptions = config.eslint;
