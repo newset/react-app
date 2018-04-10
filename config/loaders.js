@@ -1,12 +1,7 @@
 const rewireTypescript = require("react-app-rewire-typescript");
 const rewirestylus = require("./stylus");
+const { compose } = require('react-app-rewired');
 
 module.exports = (config, env) => {
-	// typescript
-	config = rewireTypescript(config, env);
-	// stylus
-	config = rewirestylus(config, env);
-	// babel
-
-	return config;
+  return compose(rewirestylus, rewireTypescript)(config, env);
 };

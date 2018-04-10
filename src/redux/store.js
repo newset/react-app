@@ -6,7 +6,7 @@ import saga from './saga';
 const createStoreWithMiddleware = applyMiddleware(createSagaMiddleware)(createStore);
 
 export default (initialState) => {
-    const store = createStoreWithMiddleware(rootReducer, initialState);
-    sagaMiddleware.run(mySaga);
-    return store;
+  const store = createStoreWithMiddleware(rootReducer, initialState);
+  sagaMiddleware.run(saga);
+  return store;
 };
