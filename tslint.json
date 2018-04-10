@@ -1,7 +1,6 @@
 {
 	"extends": [
-		"tslint-react",
-		"tslint-eslint-rules"
+		"tslint-react"
 	],
 	"rules": {
 		"align": [true, "parameters", "arguments", "statements"],
@@ -88,8 +87,9 @@
 			"check-type",
 			"check-typecast"
 		],
-		"ter-indent": [
+		"indent": [
 			true,
+			"spaces",
 			4
 		],
 		"member-access": true

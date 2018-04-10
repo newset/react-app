@@ -1,7 +1,7 @@
-import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
+import { call, put, takeEvery, takeLatest, take } from "redux-saga/effects";
 
 function* mySaga() {
-  yield put("USER_FETCH_REQUESTED", { test: 1 });
+  yield take("USER_FETCH_REQUESTED", { test: 1 });
 }
 
 export default mySaga;
