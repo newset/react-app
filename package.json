@@ -12,7 +12,6 @@
         "react-router-dom": "^4.2.2",
         "redux": "^3.7.2",
         "redux-saga": "^0.16.0",
-        "tslint-eslint-rules": "^5.1.0",
         "typescript-eslint-parser": "^14.0.0"
     },
     "scripts": {

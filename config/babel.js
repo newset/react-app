@@ -1,47 +1,47 @@
-const { getBabelLoader } = require("react-app-rewired");
+const { getBabelLoader } = require('react-app-rewired');
 
 const getArray = source => {
-	if (!source) {
-		return [];
-	}
+    if (!source) {
+        return [];
+    }
 
-	return Array.isArray(source) ? source : [source];
+    return Array.isArray(source) ? source : [source];
 };
 
 exports.include = (config, ...includes) => {
-	const babel_loader = getBabelLoader(config.module.rules);
+    const babel_loader = getBabelLoader(config.module.rules);
 
-	const include_config = getArray(babel_loader.include);
+    const include_config = getArray(babel_loader.include);
 
-	includes = includes.reduce((accumulator, include) => {
-		if (Array.isArray(include)) {
-			return accumulator.concat(include);
-		}
+    includes = includes.reduce((accumulator, include) => {
+        if (Array.isArray(include)) {
+            return accumulator.concat(include);
+        }
 
-		accumulator.push(include);
-		return accumulator;
-	}, include_config);
+        accumulator.push(include);
+        return accumulator;
+    }, include_config);
 
-	babel_loader.include = includes;
+    babel_loader.include = includes;
 
-	return config;
+    return config;
 };
 
 exports.exclude = (config, ...excludes) => {
-	const babel_loader = getBabelLoader(config.module.rules);
+    const babel_loader = getBabelLoader(config.module.rules);
 
-	const exclude_config = getArray(babel_loader.exclude);
+    const exclude_config = getArray(babel_loader.exclude);
 
-	excludes = excludes.reduce((accumulator, exclude) => {
-		if (Array.isArray(exclude)) {
-			return accumulator.concat(exclude);
-		}
+    excludes = excludes.reduce((accumulator, exclude) => {
+        if (Array.isArray(exclude)) {
+            return accumulator.concat(exclude);
+        }
 
-		accumulator.push(exclude);
-		return accumulator;
-	}, exclude_config);
+        accumulator.push(exclude);
+        return accumulator;
+    }, exclude_config);
 
-	babel_loader.exclude = excludes;
+    babel_loader.exclude = excludes;
 
-	return config;
+    return config;
 };

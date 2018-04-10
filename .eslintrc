@@ -23,7 +23,18 @@
         ],
         "quotes": [
             "error",
-            "double"
+            "single"
+        ],
+        "indent": [
+            2,
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "react/jsx-indent": [
+            2,
+            4
         ]
     }
 }
