@@ -1,20 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
 import createStore from './redux/store';
-import routes from './route';
+import Router from './route/';
 import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore();
 
-const supportsHistory = 'pushState' in window.history;
-
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter forceRefresh={!supportsHistory}>
-            <div>{routes}</div>
-        </BrowserRouter>
+        <Router platform="web" />
     </Provider>,
     document.getElementById('root')
 );
