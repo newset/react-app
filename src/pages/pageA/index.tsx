@@ -1,11 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const PageA = () => {
+const PageA = (props: any) => {
     return (
         <div>
             PageA
-            <Link to="/b">go to pageB</Link>
+            <button
+                onClick={() => {
+                    props.history.push('/b');
+                }}
+            >
+                go to pageB
+            </button>
         </div>
     );
 };

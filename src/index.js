@@ -8,9 +8,11 @@ import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore();
 
+const supportsHistory = 'pushState' in window.history;
+
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter forceRefresh={!supportsHistory}>
             <div>{routes}</div>
         </BrowserRouter>
     </Provider>,

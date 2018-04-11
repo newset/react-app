@@ -23,6 +23,7 @@
                 "SwitchCase": 1
             }
         ],
-        "react/jsx-indent": [2, 4]
+        "react/jsx-indent": [2, 4],
+        "no-console": "warn"
     }
 }
