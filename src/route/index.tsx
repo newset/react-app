@@ -1,6 +1,6 @@
 import React from 'react';
 import getWebRoute from './web';
-import getNativeRoute from './native';
+// import getNativeRoute from './native';
 
 import App from '../App';
 import PageA from '../pages/pageA';
@@ -9,18 +9,15 @@ import PageB from '../pages/pageB';
 const routes = [
     {
         path: '/',
-        page: App,
-        key: 'index'
+        component: App
     },
     {
         path: '/a',
-        page: PageA,
-        key: 'a'
+        component: PageA
     },
     {
         path: '/b',
-        page: PageB,
-        key: 'b'
+        component: PageB
     }
 ];
 
@@ -31,9 +28,10 @@ interface RouterProps {
 const Router = (props: RouterProps) => {
     return (
         <div>
-            {props.platform === 'native'
-                ? getNativeRoute(routes)
-                : getWebRoute(routes)}
+            {// props.platform === 'native'
+            //     ? getNativeRoute(routes)
+            //     : getWebRoute(routes)
+            getWebRoute(routes)}
         </div>
     );
 };

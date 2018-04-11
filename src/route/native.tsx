@@ -1,25 +1,22 @@
 import React from 'react';
-import { Router, Stack, Scene } from 'react-native-router-flux';
+import { NativeRouter, Route } from 'react-router-native';
+
+const RouteWithSubRoutes = (route: any) => (
+    <Route
+        path={route.path}
+        render={props => <route.component {...props} routes={route.routes} />}
+    />
+);
 
 interface RouteFace {
     path: string;
-    page: React.ComponentType<any>;
-    key: string;
+    component: React.ComponentType<any>;
 }
 
-const NativeRouter = (routers: Array<RouteFace>): any => (
-    <Router>
-        <Stack key="root">
-            {routers.map(route => (
-                <Scene
-                    path={route.path}
-                    key={route.key}
-                    component={route.page}
-                    {...route}
-                />
-            ))}
-        </Stack>
-    </Router>
+const Router = (routers: Array<RouteFace>): any => (
+    <NativeRouter>
+        {routers.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
+    </NativeRouter>
 );
 
-export default NativeRouter;
+export default Router;
