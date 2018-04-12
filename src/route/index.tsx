@@ -4,8 +4,6 @@ import getWebRoute from './web';
 
 import App from '../App';
 import PageA from '../pages/pageA';
-import PageB from '../pages/pageB';
-import PlanTasks from '../pages/PlanTasks';
 
 const routes = [
     {
@@ -15,14 +13,6 @@ const routes = [
     {
         path: '/a',
         component: PageA
-    },
-    {
-        path: '/b',
-        component: PageB
-    },
-    {
-        path: '/plan',
-        component: PlanTasks
     }
 ];
 
