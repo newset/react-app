@@ -8,7 +8,14 @@ const HEALTH_REACT_PATH = '/health-react/';
  * @param {object} opts 请求选项
  */
 export const request = ({ method, url, data, params }) => {
-    const payload = { data, method, url };
+    const payload = { method: method.toUpperCase(), url };
+
+    if (payload.method === 'GET') {
+        payload.params = params;
+    } else {
+        payload.body = data;
+    }
+
     return fetch(payload).then(res => res.json());
 };
 

@@ -5,6 +5,7 @@ import getWebRoute from './web';
 import App from '../App';
 import PageA from '../pages/pageA';
 import PageB from '../pages/pageB';
+import PlanTasks from '../pages/PlanTasks';
 
 const routes = [
     {
@@ -18,6 +19,10 @@ const routes = [
     {
         path: '/b',
         component: PageB
+    },
+    {
+        path: '/plan',
+        component: PlanTasks
     }
 ];
 
@@ -26,14 +31,7 @@ interface RouterProps {
 }
 
 const Router = (props: RouterProps) => {
-    return (
-        <div>
-            {// props.platform === 'native'
-            //     ? getNativeRoute(routes)
-            //     : getWebRoute(routes)
-            getWebRoute(routes)}
-        </div>
-    );
+    return <div>{getWebRoute(routes)}</div>;
 };
 
 export default Router;
