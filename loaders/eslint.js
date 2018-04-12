@@ -3,13 +3,13 @@ const { getLoader } = require('react-app-rewired');
 // this is the path of eslint-loader `index.js`
 const ESLINT_PATH = `eslint-loader${path.sep}index.js`;
 function getEslintOptions(rules) {
-    const matcher = (rule) => rule.loader
-        && typeof rule.loader === 'string'
-        && rule.loader.endsWith(ESLINT_PATH);
+    const matcher = rule =>
+        rule.loader &&
+        typeof rule.loader === 'string' &&
+        rule.loader.endsWith(ESLINT_PATH);
     return getLoader(rules, matcher).options;
 }
 function rewireEslint(config, env, override = f => f) {
-
     config.module.rules[0].test = /.(js|jsx|mjs|ts|tsx)/;
     // if `react-scripts` version < 1.0.0
     // **eslint options** is in `config`

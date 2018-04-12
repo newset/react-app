@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import createStore from './redux/store';
-import Router from './route/';
+import Router from './route/index.tsx';
 import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore();
