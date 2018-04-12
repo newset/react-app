@@ -1,6 +1,6 @@
 {
     "extends": ["eslint:recommended", "plugin:react/recommended"],
-    "parser": "typescript-eslint-parser",
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",
